@@ -115,12 +115,27 @@
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         flex: 1;
+        gap: 10px;
     }
 
+    main article {
+        padding: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
+    main article.main-article {
+        grid-column: 1 / 4;
+        padding: 45px 25px;
+    }
 
+    main article .article-content {
+        padding: 10px;
+        background-color: rgba(251, 246, 246, .4);
+    }
 
     .chat {
         position: fixed;
